@@ -8,7 +8,7 @@ const requireSignin = passport.authenticate('local', { session: false});
 module.exports = function(app) {
   // requireAuth checks jwt
   app.get('/', requireAuth, function(req, res, next){
-    res.send(['watter bottle', 'chicken']);
+    res.send({message: 'Super secred code is ABC123'});
   });
   // requireSingin does authentication with email and password (local authentication)
   // Authentication.signin does issuing jwt
